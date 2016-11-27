@@ -1,34 +1,132 @@
-<div class="container" style="margin-top: 15px;">
-
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" [routerLink]="['/about']">ASP.NET Core // Angular2 // Webpack</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li><a [routerLink]="['/home']">Home</a></li>
-                <li><a [routerLink]="['/about']">About</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="https://twitter.com/damien_bod"><img src="assets/damienbod.jpg" height="40" style="margin-top: -10px;" /></a></li>
-                <li><a href="https://twitter.com/FabianGosebrink"><img src="assets/fabianGosebrink.jpg" height="40" style="margin-top: -10px;" /></a></li>
-                <li><a href="https://twitter.com/robisim74"><img src="assets/RobertoSimonetti.jpg" height="40" style="margin-top: -10px;" /></a></li>
-            </ul>
-        </div>
-    </nav>
+<div>
+    <md-toolbar color="primary" class="mm-toolbar-fixed">
+        <button class="app-icon-button" (click)="sidenav.toggle()">
+            <i class="material-icons app-toolbar-menu">menu</i>
+        </button>
+        Angular Material2 E   xample App
+    </md-toolbar>
 
 
+    <md-sidenav-layout fullscreen class="mm-content">
 
-    <router-outlet></router-outlet>
+        <md-sidenav #sidenav opened mode="side" class="app-sidenav mm-sidenav mm-sidebar">
+            <!--<div class="sidebar">-->
+                <nav class="sidebar-nav">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/Home']"><i class="icon-speedometer"></i> Home <span class="tag tag-info">NEW</span></a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="nav-title">
+                            UI Elements
+                        </li>
+                        <li class="nav-item nav-dropdown" routerLinkActive="open">
+                            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Components</a>
+                            <ul class="nav-dropdown-items">
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/components/buttons']"><i class="icon-puzzle"></i> Buttons</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/components/social-buttons']"><i class="icon-puzzle"></i> Social Buttons</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/components/cards']"><i class="icon-puzzle"></i> Cards</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/components/forms']"><i class="icon-puzzle"></i> Forms</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/components/switches']"><i class="icon-puzzle"></i> Switches</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/components/tables']"><i class="icon-puzzle"></i> Tables</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/components/tabs']"><i class="icon-puzzle"></i> Tabs</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-dropdown" routerLinkActive="open">
+                            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> Icons</a>
+                            <ul class="nav-dropdown-items">
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/icons/font-awesome']"><i class="icon-star"></i> Font Awesome</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/icons/simple-line-icons']"><i class="icon-star"></i> Simple Line Icons</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/widgets']"><i class="icon-calculator"></i> Widgets <span class="tag tag-info">NEW</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/charts']"><i class="icon-pie-chart"></i> Charts</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="nav-title">
+                            Admin
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/company']"><i class="icon-pie-chart"></i> Company</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/costcenter']"><i class="icon-pie-chart"></i> Cost Center</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/currency']"><i class="icon-pie-chart"></i> Currency</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/user']"><i class="icon-pie-chart"></i> User</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/role']"><i class="icon-pie-chart"></i> Role</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/phase']"><i class="icon-pie-chart"></i> Phase</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/travelphase']"><i class="icon-pie-chart"></i> TravelPhase</a>
+                        </li>
 
 
-    <footer>
-        <p>
-            <a href="https://twitter.com/FabianGosebrink">Fabian Gosebrink</a>&nbsp;Blog: <a href="http://offering.solutions">Offering.Solutions</a> &amp;
-            <a href="https://twitter.com/damien_bod">Damien Bowden</a>&nbsp;Blog: <a href="https://damienbod.com/">Software Engineering</a> &amp;
-            <a href="https://twitter.com/robisim74">Roberto Simonetti</a>
-            
-            &copy; 2016
-        </p>
-    </footer>
+                        <li class="nav-item nav-dropdown">
+
+                            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> Pages</a>
+                            <ul class="nav-dropdown-items">
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/pages/login']"><i class="icon-star"></i> Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/pages/register']"><i class="icon-star"></i> Register</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/pages/404']"><i class="icon-star"></i> Error 404</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/pages/500']"><i class="icon-star"></i> Error 500</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </nav>
+            <!--</div>-->
+        </md-sidenav>
+
+        <!--<md-toolbar color="primary">
+            <button class="app-icon-button" (click)="sidenav.toggle()">
+                <i class="material-icons app-toolbar-menu">menu</i>
+            </button>
+
+            Angular Material2 Example App
+
+            <span class="app-toolbar-filler"></span>
+            <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
+        </md-toolbar>-->
+
+        <router-outlet></router-outlet>
+
+
+    </md-sidenav-layout>
 </div>
